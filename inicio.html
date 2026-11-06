@@ -1,104 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-//a continuacion se muestra un mensaje alert("mensaje de prueba");
-/* los comentarios de varias lineas son muy utiles cuando se necesitan incluir bastante informacion en los comentarios */
 <head>
-    <script type ="text/javascript">
-        alert("un mensaje de prueba");
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Práctica 1 SI</title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Práctica 1 – Desarrollo basado en plataformas</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="practica.css">
-
-    <style>
-        body {
-            background: linear-gradient(to right, #001aff, #0011ff);
-        }
-
-        section {
-            color: rgb(0, 81, 255);
-            font-family: Arial, sans-serif;
-        }
-
-        .menu {
-            background-color: rgb(173, 209, 230);
-            padding: 15px;
-        }
-    </style>
-
+    <script src="script.js" defer></script>
+    
 </head>
-
 <body>
-
-    <main class="contenedor">
-
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
         <h1>Esta es mi práctica</h1>
-
-        <img src="imagen.jpg"
-             alt="Cristiano Ronaldo"
-             width="300"
-             height="200">
-
-        <h2>Desarrollo basado en plataformas</h2>
-
-        <p>Jimenez Sixto - Jimmy Garcia</p>
-
-        <a href="https://www.youtube.com/" target="_blank">
-            Enlace a YouTube
-        </a>
-
-        <div class="contenido">
-
-            <section>
-                <h2>Sección 1</h2>
-                <p>Contenido de la sección 1.</p>
-            </section>
-
-            <section>
-                <h2>Sección 2</h2>
-                <p>Contenido de la sección 2.</p>
-            </section>
-
-        </div>
-
-        <nav class="menu">
-
-            <h1 style="color: blue; text-align: center;">
-                Menú
-            </h1>
-
-            <ul>
-                <li>
-                    <a href="articulos.html">Artículos</a>
-                </li>
-
-                <li>
-                    <a href="actualidad.html">Actualidad</a>
-                </li>
-
-                <li>
-                    <a href="sucesos.html">Sucesos</a>
-                </li>
-
-                <li>
-                    <a href="formulario.html">Formulario</a>
-                </li>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="inicio.html" aria-current="page">Inicio</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="actualidad.html">Actualidad</a></li>
+                <li><a href="sucesos.html">Sucesos</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
             </ul>
-
         </nav>
+    </header>
+    <main id="contenido">
+        <img class="foto" src="imagen.jpg" width="738" height="408"
+             alt="Cristiano Ronaldo con la camiseta blanca del Real Madrid, mirando hacia abajo un balón bajo las luces de un estadio">
 
-        <section>
-            <h1>Bora Bora</h1>
-<script type="text/javascript" src ="js/codigo.js" ></script>
-            <p onclick="alert('un mensaje de prueba')"> parrafo de texto
-texto.</p>
+        <section aria-labelledby="plataformas">
+            <h2 id="plataformas">Desarrollo basado en plataformas</h2>
+            <p>Jimenez Sixto - Jimmy Garcia</p>
+            <p><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Ir a YouTube (se abre en una pestaña nueva)</a></p>
         </section>
 
+        <div class="rejilla">
+            <section aria-labelledby="seccion1">
+                <h2 id="seccion1">Sección 1</h2>
+                <p>Contenido de la sección 1.</p>
+            </section>
+            <section aria-labelledby="seccion2">
+                <h2 id="seccion2">Sección 2</h2>
+                <p>Contenido de la sección 2.</p>
+            </section>
+        </div>
+
+        <section aria-labelledby="bora">
+            <h2 id="bora">Bora Bora</h2>
+            <p>Isla principal caracterizada por su mar turquesa.</p>
+        </section>
     </main>
-
+    <footer class="pie">
+        <p>Práctica 1 – Desarrollo basado en plataformas</p>
+    </footer>
 </body>
-
 </html>

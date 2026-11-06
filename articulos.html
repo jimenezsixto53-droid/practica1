@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horario</title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Artículos: horario de clases | Práctica 1</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="practica.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <table>
-        <tr>
-            <td>Hora</td>
-            <th>Lunes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-        </tr>
-
-        <tr>
-            <th>10:00 - 13:00</th>
-            <td>Programación</td>
-            <td>Desarrollo</td>
-            <td>Cálculo</td>
-        </tr>
-
-        <tr>
-            <th>14:00 - 16:00</th>
-            <td>Algoritmo</td>
-            <td>Base de datos</td>
-            <td>Física</td>
-        </tr>
-    </table>
-
-    <a href="mailto:jimenezsixto53@gmail.com">
-        Direccionar a correo
-    </a>
-
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <h1>Artículos: horario de clases</h1>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="articulos.html" aria-current="page">Artículos</a></li>
+                <li><a href="actualidad.html">Actualidad</a></li>
+                <li><a href="sucesos.html">Sucesos</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <table>
+            <caption>Horario semanal de clases</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Lunes</th>
+                    <th scope="col">Miércoles</th>
+                    <th scope="col">Jueves</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">10:00 - 13:00</th>
+                    <td>Programación</td>
+                    <td>Desarrollo</td>
+                    <td>Cálculo</td>
+                </tr>
+                <tr>
+                    <th scope="row">14:00 - 16:00</th>
+                    <td>Algoritmo</td>
+                    <td>Base de datos</td>
+                    <td>Física</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="mailto:jimenezsixto53@gmail.com">Enviar un correo a jimenezsixto53@gmail.com</a></p>
+    </main>
+    <footer class="pie">
+        <p>Práctica 1 – Desarrollo basado en plataformas</p>
+    </footer>
 </body>
 </html>

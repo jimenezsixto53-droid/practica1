@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sucesos | Práctica 1</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="practica.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <h1>Sucesos</h1>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="actualidad.html">Actualidad</a></li>
+                <li><a href="sucesos.html" aria-current="page">Sucesos</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <article aria-labelledby="suceso1">
+            <h2 id="suceso1">Estándares de la W3C</h2>
+            <p>La W3C (World Wide Web Consortium) publica las normas que permiten que un sitio web sea válido, accesible e interoperable en cualquier navegador y dispositivo.</p>
+        </article>
+        <article aria-labelledby="suceso2">
+            <h2 id="suceso2">Accesibilidad con WCAG 2.2</h2>
+            <p>Las pautas WCAG 2.2 de nivel AA buscan que personas con discapacidad visual, auditiva, motriz o cognitiva puedan percibir, operar y entender el sitio.</p>
+        </article>
+    </main>
+    <footer class="pie">
+        <p>Práctica 1 – Desarrollo basado en plataformas</p>
+    </footer>
+</body>
+</html>

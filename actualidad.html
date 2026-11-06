@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Página UTM</title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actualidad: enlace a la UTM | Práctica 1</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="practica.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <p>
-        Esta es la
-        <a href="https://online.utm.edu.ec/login/index.php"
-           title="enlace a la demostración">
-            página
-        </a>
-        UTM
-    </p>
-
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <h1>Actualidad</h1>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="actualidad.html" aria-current="page">Actualidad</a></li>
+                <li><a href="sucesos.html">Sucesos</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <p>Esta es la <a href="https://online.utm.edu.ec/login/index.php">página de acceso al aula virtual de la UTM</a>.</p>
+    </main>
+    <footer class="pie">
+        <p>Práctica 1 – Desarrollo basado en plataformas</p>
+    </footer>
 </body>
 </html>

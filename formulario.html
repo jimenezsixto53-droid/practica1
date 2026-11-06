@@ -1,40 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de datos | Práctica 1</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="practica.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <h1>Formulario de datos</h1>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="actualidad.html">Actualidad</a></li>
+                <li><a href="sucesos.html">Sucesos</a></li>
+                <li><a href="formulario.html" aria-current="page">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <form id="datos" name="datos" class="formulario">
+            <p>Los campos marcados como «obligatorio» deben completarse.</p>
 
-<form name="datos" style="background-color: lightblue;">
+            <div class="campo">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" min="1" max="120" aria-describedby="edad-error" data-rango="Escribe una edad entre 1 y 120.">
+                <span class="error" id="edad-error"></span>
+            </div>
 
-    <br><input type="number"> Edad<br>
+            <div class="campo">
+                <label for="correo">Correo electrónico (obligatorio)</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="correo-error" data-vacio="Escribe tu correo electrónico." data-formato="Escribe un correo válido, por ejemplo nombre@dominio.com.">
+                <span class="error" id="correo-error"></span>
+            </div>
 
-    <br><input type="email"> E-mail<br>
+            <div class="campo">
+                <label for="nombre">Nombre (obligatorio)</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="given-name" required aria-describedby="nombre-error" data-vacio="Escribe tu nombre.">
+                <span class="error" id="nombre-error"></span>
+            </div>
 
-    <br><input type="text"> Nombre<br>
+            <div class="campo">
+                <label for="apellido">Apellido (obligatorio)</label>
+                <input type="text" id="apellido" name="apellido" autocomplete="family-name" required aria-describedby="apellido-error" data-vacio="Escribe tu apellido.">
+                <span class="error" id="apellido-error"></span>
+            </div>
 
-    <br><input type="text"> Apellido<br>
+            <div class="campo">
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="nacimiento" name="nacimiento" autocomplete="bday" aria-describedby="nacimiento-error">
+                <span class="error" id="nacimiento-error"></span>
+            </div>
 
-    <br><input type="date"> Fecha nacimiento<br>
+            <div class="campo">
+                <label for="web">Página web</label>
+                <input type="url" id="web" name="web" autocomplete="url" aria-describedby="web-error" data-formato="Escribe una dirección completa, por ejemplo https://www.ejemplo.com.">
+                <span class="error" id="web-error"></span>
+            </div>
 
-    <br><input type="url"> Página Web<br>
+            <div class="campo">
+                <label for="estudias">¿Qué estudias?</label>
+                <textarea id="estudias" name="estudias" rows="3" aria-describedby="estudias-error"></textarea>
+                <span class="error" id="estudias-error"></span>
+            </div>
 
-    <br>
-    <label style="color: darkblue;">Que estudias</label><br>
-    <textarea rows="1" cols="15"></textarea><br>
+            <fieldset class="opciones">
+                <legend>Tecnologías que estudias</legend>
+                <label><input type="checkbox" name="tecnologias" value="HTML5"> HTML5</label>
+                <label><input type="checkbox" name="tecnologias" value="CSS3"> CSS3</label>
+                <label><input type="checkbox" name="tecnologias" value="JavaScript"> JavaScript</label>
+            </fieldset>
 
-    <br>
-    <input type="checkbox" value="HTML5">
-    <label style="color: green;">HTML5</label><br>
+            <div class="campo">
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="5" aria-describedby="comentarios-error"></textarea>
+                <span class="error" id="comentarios-error"></span>
+            </div>
 
-    <br>
-    <input type="checkbox" value="CSS3">
-    <label style="color: green;">CSS3</label><br>
-
-    <br>
-    <input type="checkbox" value="JavaScript">
-    <label style="color: green;">JavaScript</label><br>
-
-    <br>
-    <textarea cols="15" rows="6"></textarea><br>
-
-    <br>
-    <input type="button"
- value="Enviar"
-   style="background-color: darkgreen; color: white;">
-
-</form>
+            <button type="submit" class="boton">Enviar</button>
+            <p id="estado" class="estado" aria-live="polite"></p>
+        </form>
+    </main>
+    <footer class="pie">
+        <p>Práctica 1 – Desarrollo basado en plataformas</p>
+    </footer>
+</body>
+</html>
